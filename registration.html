@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration - Hospital Management Portal</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+</head>
+<body style="background-image: url('HP.jpg'); background-size: cover; background-repeat: no-repeat; height: 300vh; margin: 0;">
+
+    <header>
+        <h1>Patient Registration</h1>
+    </header>
+    
+    <main>
+        <h2>Register as a Patient</h2>
+        <form id="patientForm">
+            <!-- Patient Full Name -->
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter full name" required><br><br>
+            
+            <!-- Age -->
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age" min="1" max="120" required><br><br>
+            
+            <!-- Gender -->
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="Male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label><br><br>
+            
+            <!-- Email -->
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter email address" required><br><br>
+            
+            <!-- Phone Number -->
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required><br><br>
+            
+            <!-- Symptoms (Check Boxes) -->
+            <label>Symptoms (Check all that apply):</label><br>
+            <input type="checkbox" id="fever" name="symptoms" value="Fever">
+            <label for="fever">Fever</label>
+            <input type="checkbox" id="cough" name="symptoms" value="Cough">
+            <label for="cough">Cough</label>
+            <input type="checkbox" id="headache" name="symptoms" value="Headache">
+            <label for="headache">Headache</label><br><br>
+            
+            <!-- Department to Visit (Dropdown) -->
+            <label for="department">Department to Visit:</label><br>
+            <select id="department" name="department" required>
+                <option value="" disabled selected>Select a department</option>
+                <option value="General">General Consultation</option>
+                <option value="Pediatrics">Pediatrics</option>
+                <option value="Radiology">Radiology</option>
+                <option value="Surgery">Surgery</option>
+            </select><br><br>
+            
+            <!-- Date Picker -->
+            <label for="appointment">Appointment Date:</label><br>
+            <input type="date" id="appointment" name="appointment" required><br><br>
+            
+            <!-- File Upload (Medical Records) -->
+            <label for="medicalRecords">Upload Medical Records (optional):</label><br>
+            <input type="file" id="medicalRecords" name="medicalRecords"><br><br>
+            
+            <!-- Submit and Reset Buttons -->
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </main>
+    <nav>
+        <ul>
+            <a href="index.html">Home|</a>
+            <a href="about.html">About Us|</a>
+            <a href="services.html">Services|</a>
+            <a href="contact.html">Contact Us|</a>
+        </ul>
+    </nav>
+    <footer>
+        <p>&copy; 2024 Hospital Management Portal. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Link to JavaScript file -->
+</body>
+</html>
